@@ -43,10 +43,10 @@ def gerar_qr_code(word, uri, logo_uri='img/Logo-Brazucabet.png'):
     draw = ImageDraw.Draw(QRimg)
 
     # Setar Fonte que quero usar
-    fonte  = ImageFont.truetype('fonts/COOLVETICAHV-ITALIC.TTF', 25)
+    fonte  = ImageFont.truetype('fonts/ARIALBD.TTF', 25)
 
     #sobrepor da imagem algum texto
-    draw.text((160, 455), word, (0,0,0), font=fonte)
+    draw.text((180, 455), word, (0,0,0), font=fonte)
 
     #salvar a imagem
     QRimg.save(f'qrcode_{word.replace(" ", "_")}.png')
@@ -55,4 +55,4 @@ def gerar_qr_code(word, uri, logo_uri='img/Logo-Brazucabet.png'):
 
 
 if __name__ == '__main__':
-    gerar_qr_code('Venha jogar!', 'https://brazucabet.online/hub/signup?affiliate=')
+    gerar_qr_code('Criar Conta', 'https://brazucabet.online/hub/signup?affiliate=')
